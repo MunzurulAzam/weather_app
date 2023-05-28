@@ -43,7 +43,7 @@ class Current {
 
     clouds: json['clouds'] as int?,
 
-    windSpeed: json['wind_speed'] as double,
+    windSpeed: json['wind_speed'].toDouble(),
 
     weather: (json['weather'] as List<dynamic>?)
         ?.map((e) => Weather.fromJson(e as Map<String, dynamic>))
